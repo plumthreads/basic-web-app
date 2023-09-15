@@ -7,6 +7,11 @@ describe("QueryProcessor", () => {
         const response: string = QueryProcessor(query);
         expect(typeof response).toBe("string");
     });
+    test("should return a ali4", () => {
+        const query = "What is your Andrew Id?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("ali4");
+    });
 
     test('should return shakespeare description', () => {
         const query = "shakespeare";
