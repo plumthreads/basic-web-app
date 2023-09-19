@@ -19,6 +19,14 @@ if (add) {
      const y: number = parseInt(add[2]);
 return (x+y).toString();
   }
+const sub = query.match(/What is (\d+) minus (\d+)/);
+  
+if (sub) {
+     const x: number = parseInt(sub[1]);
+     const y: number = parseInt(sub[2]);
+return (x-y).toString();
+  }
+
 
 const mult = query.match(/What is (\d+) multiplied by (\d+)/);
 if (mult) {
