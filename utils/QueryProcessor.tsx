@@ -11,6 +11,14 @@ export default function QueryProcessor(query: string): string {
     return (
       "ali4"
     );
+ }
+const add = query.match(/What is (\d+) plus (\d+)\?/i);
+  
+if (add) {
+     const x: num = parseInt(add[1])
+     const y: num = parseInt(add[2]);
+return (x+y).toString();
+	);
   }
 
   return "";
