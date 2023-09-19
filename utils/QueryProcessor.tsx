@@ -49,7 +49,7 @@ function isPrime(number) {
 if (prime) {
   const tested = "";
   for(let i = 1;i < prime.length; i++) {
-    if(isPrime(prime[i]) {
+    if(isPrime(prime[i])) {
       tested += prime[i].toString();
     }
   }
