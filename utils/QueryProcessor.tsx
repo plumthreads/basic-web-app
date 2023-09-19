@@ -15,16 +15,39 @@ export default function QueryProcessor(query: string): string {
 const add = query.match(/What is (\d+) plus (\d+)/);
   
 if (add) {
-     const x: num = parseInt(add[1]);
-     const y: num = parseInt(add[2]);
+     const x: number = parseInt(add[1]);
+     const y: number = parseInt(add[2]);
 return (x+y).toString();
   }
 
 const mult = query.match(/What is (\d+) multiplied by (\d+)/);
 if (mult) {
- const x: num = parseInt(mult[1]);
- const y: num = parseInt(mult[2]);
+ const x: number = parseInt(mult[1]);
+ const y: number = parseInt(mult[2]);
 return (x*y).toString();
-}  
+}
+const prime  = query.match(/Which of the following numbers are primes:(\d+),(\d+),(\d+),(\d+),(\d+)/);
+function isPrime(number) {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false; 
+    }
+  }
+  return true;
+}
+if (prime) {
+  const tested = "";
+  for(let i = 1;i < prime.length; i++) {
+    if(isPrime(prime[i]) {
+      tested += prime[i].toString();
+    }
+  }
+  return tested;
+}
+  
 return "";
 }
+
