@@ -35,7 +35,7 @@ if (mult) {
 return (x*y).toString();
 }
 const prime  = query.match(/Which of the following numbers are primes:(\d+),(\d+),(\d+),(\d+),(\d+)/);
-function isPrime(number) {
+function isPrime(number : number) {
   if (number < 2) {
     return false;
   }
@@ -47,9 +47,9 @@ function isPrime(number) {
   return true;
 }
 if (prime) {
-  const tested = "";
+  let tested = "";
   for(let i = 1;i < prime.length; i++) {
-    if(isPrime(prime[i])) {
+    if(isPrime(parseInt(prime[i]))) {
       tested += prime[i].toString();
     }
   }
